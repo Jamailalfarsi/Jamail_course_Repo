@@ -57,6 +57,7 @@ public class School {
 		System.out.println("1. Factorial:");
 		System.out.println("2. Fibonacci series:");
 		System.out.println("3. Back to main menue");
+		//Thank you
 	}
 	
 	
