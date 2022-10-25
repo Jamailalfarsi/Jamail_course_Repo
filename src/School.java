@@ -49,6 +49,7 @@ public class School {
 		System.out.println("5. History");
 		System.out.println("6. Currency");
 		System.out.println("7. Factorial and Fibonacci series");
+		//System.out.println("8. *********");
 	}
 	static void submenueFunction() {
 		System.out.println("\n");
