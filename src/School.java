@@ -60,6 +60,15 @@ public class School {
 		//Thank you
 	}
 	
+	public static int factorial(int n) {
+	if (n==1) {
+		return 1;
+	}
+	else {
+		return n*factorial(n-1);
+	}
+	}
+	
 	
 	// my name is Jamail
 	// I'm programer 
@@ -324,17 +333,22 @@ public class School {
 					int studentSubMenue = sc.nextInt();
 					switch(studentSubMenue) {
 					case 1:
-						int fact =1 ;
+						
+						
 						
 						System.out.println("Enter the number of factorial:");
 						int userInput =sc.nextInt();
-						for(int i=1; i<=userInput; i++)
-						{
-							fact= fact *i;
-							System.out.println(i);
-						}
+						long resultOfFactorial=factorial(userInput);
+						System.out.println("factorial("+userInput+"!"+")=" + userInput+"*factorial("+(userInput-1)+"!"+")");
+						System.out.println(resultOfFactorial);
+					//    int fact =1 ;
+					//    for(int i=1; i<=userInput; i++)
+					//	{
+					// 	  fact= fact *i;
+					//	  System.out.println(i);
+					//	}
 						
-						System.out.println("Factory of: \t"+ userInput+"\t is :\t"+fact);
+					//    System.out.println("Factory of: \t"+ userInput+"\t is :\t"+fact);
 						
 
 						 break;
@@ -345,7 +359,7 @@ public class School {
 						int userInput1 =sc.nextInt();
 						
 					
-						int n1=0,n2=1,n3,i,count=userInput1;   
+						long n1=0,n2=1,n3,i,count=userInput1;   
 						
 						 System.out.print(n1+" "+n2);//display 0 and 1
 						    
@@ -393,15 +407,3 @@ public class School {
 	
 
 
-//	    	 }
-//	    	
-//
-// 	
-//	   		
-//	   		}
-//	   	
-//	   	}
-//	   		
-//	    }
-//	    }
-//	  
