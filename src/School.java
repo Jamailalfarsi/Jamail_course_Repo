@@ -1,6 +1,13 @@
 
 
 import java.util.*;
+import java.io.*;
+import java.io.IOException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 
 public class School {
 
@@ -15,7 +22,7 @@ public class School {
 	static boolean isExitSubject = true;
 
 	List<Student> studentList = new ArrayList<>();
-	Stack<String> stk = new Stack<>();
+	Stack stk = new Stack();
 
 //	     Map<String, Double>currencyMap = new HashMap<>();
 //	     Map<String, Map<String, Double>>comparisionMap = new HashMap<>();
@@ -70,12 +77,15 @@ public class School {
 	}
 	
 	
-	// my name is Jamail
-	// I'm programer 
-	// Hi
+	
 	
 
-	public static void main(String[] args) {
+	public static void main (String[] args) {
+		
+		
+	
+		
+		
 		Scanner sc = new Scanner(System.in);
 		Stack<String> stk = new Stack<>();
 		Set<String> hashEmailSet = new HashSet<String>();
@@ -87,7 +97,7 @@ public class School {
 		double feesAmount = 0;
 		double amountCal = 0;
 		double amount;
-		
+				
 		boolean usepass = true;
 		String username,password;
 		
@@ -96,8 +106,30 @@ public class School {
 			username = sc.nextLine();
 		System.out.println("Enter Password");
 			password = sc.nextLine();
-			if(username.equals("Jamail")&& password.equals("A12")){
-				System.out.println("Username and password are correct Welcome to menue");
+			
+			
+			try {
+				if(!username.equals("Jamail")){
+					throw new Exception("username is not found");
+					
+					}
+			
+				else if(! password.equals("A12")){
+					throw new Exception("password is not found");
+				
+				}
+				
+				
+				else {
+					System.out.println("username and password Successful welcome to main menue");
+
+				}
+				
+				System.out.println("*********************************************");
+			
+			
+			
+			
 			
 			
 		
@@ -125,9 +157,8 @@ public class School {
 //			   	  
 //			   		schObj.setSchoolName(schInput);// object chaining
 //			    	schoolList.add(schObj);
-
-				while (isExit) {
-					School schObj = new School(); // object for school
+				isExit = Boolean.TRUE;
+				School schObj = new School(); // object for school
 //			  	  List<School> schoolList=new ArrayList<>();
 					System.out.println("Enter School Name: ");
 					String schInput = sc.next();
@@ -135,6 +166,8 @@ public class School {
 
 					schObj.setSchoolName(schInput);// object chaining
 					schoolList.add(schObj);
+				while (isExit) {
+					
 
 					Student studentObj = new Student();// student object
 
@@ -224,6 +257,19 @@ public class School {
 					if (exitInput2 == 0) {
 						isExit = false;
 					}
+					
+					try {
+						FileOutputStream fout=new FileOutputStream("stack.txt");
+						ObjectOutputStream out =new ObjectOutputStream(fout);
+						out.writeObject(stk);
+						out.flush();
+						out.close();
+						
+					}
+					catch(IOException e) {
+						e.printStackTrace();
+					}
+					
 				}
 				break;
 			case 2:
@@ -252,7 +298,7 @@ public class School {
 						for (Subject j : h.listSubject) {
 							for (Mark m : j.getListMark()) {
 								System.out.println("Student mark of " + j.getSubName() + ":" + " " + m.getSubMark());
-								System.out.println("\tStudent Fees Amount: " + amountCal + "OMR");
+								//System.out.println("\tStudent Fees Amount: " + amountCal + "OMR");
 
 							}
 						}
@@ -265,10 +311,23 @@ public class School {
 				System.out.println("***** The history is ******");
 				// printing history
 				while (stk.empty() == false) {
-					System.out.println(stk.pop());
+				System.out.println(stk.pop());
 					// {@code true} if and only if this stack contains
 					// no items; {@code false} otherwise.
+			
+			}
+				try {
+					
+				ObjectInputStream in=new ObjectInputStream(new FileInputStream("stack.txt"));
+				Stack stk1  =(Stack)in.readObject();
+				System.out.println(stk1);
+				
+				in.close();
 				}
+				catch(Exception e) {
+					System.out.println(e);
+				}
+				
 				break;
 			case 6:
 				Map<String, Double> currencyMap = new HashMap<>();
@@ -397,11 +456,17 @@ public class School {
 		} while (true);
 		
 			}
-			System.out.println("Login faild please Try again");
+			catch(Exception e){
+				System.out.println("Execption:"+ e.getMessage() );
 			}
+
+			}
+			
+			
 		usepass=false;
 	}}
 
+	
 	
 		
 	
