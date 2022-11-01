@@ -166,6 +166,7 @@ public class School {
 
 					schObj.setSchoolName(schInput);// object chaining
 					schoolList.add(schObj);
+					
 				while (isExit) {
 					
 
@@ -259,7 +260,7 @@ public class School {
 					}
 					
 					try {
-						FileOutputStream fout=new FileOutputStream("stack.txt");
+						FileOutputStream fout=new FileOutputStream("C:\\Users\\user021\\eclipse-workspace\\history.txt");
 						ObjectOutputStream out =new ObjectOutputStream(fout);
 						out.writeObject(stk);
 						out.flush();
@@ -312,14 +313,14 @@ public class School {
 				// printing history
 				while (stk.empty() == false) {
 				System.out.println(stk.pop());
-					// {@code true} if and only if this stack contains
+				// {@code true} if and only if this stack contains
 					// no items; {@code false} otherwise.
-			
+		
 			}
 				try {
 					
-				ObjectInputStream in=new ObjectInputStream(new FileInputStream("stack.txt"));
-				Stack stk1  =(Stack)in.readObject();
+				ObjectInputStream in=new ObjectInputStream(new FileInputStream("C:\\Users\\user021\\eclipse-workspace\\history.txt"));
+				Stack<String> stk1  =(Stack<String>)in.readObject();
 				System.out.println(stk1);
 				
 				in.close();
