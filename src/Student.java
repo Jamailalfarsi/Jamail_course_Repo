@@ -3,7 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student implements StudentInterface,Serializable{
+public class Student implements StudentInterface {
 	
 	
 

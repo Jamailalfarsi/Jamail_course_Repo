@@ -190,6 +190,7 @@ public class School {
 					
 					System.out.println("Enter student Age:");
 					Integer stuAge = sc.nextInt();
+					
 					//stk.push(stuAge);
 					//stSudentObj.studentAge(stuAge );
 					System.out.println(studentObj.studentAge(stuAge ));
@@ -256,6 +257,8 @@ public class School {
 
 						subjectObj.listMark.add(markObj);
 						studentObj.listSubject.add(subjectObj);
+						subjectObj.pass(markInput);
+						
 
 						System.out.println("press 1 to add new subject , press 0 to exit");
 						int exitInput = sc.nextInt();
