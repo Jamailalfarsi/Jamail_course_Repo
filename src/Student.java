@@ -29,6 +29,16 @@ public class Student implements StudentInterface,Serializable{
 	    	 String fullName = firstName + lastName;
 		  return fullName;
 	   }
+	     @Override
+	     public int studentAge(int age) {
+	    	 if(age<=20) {
+	    		 System.out.println("This student can registration");
+	    	 }
+	    	 else
+	    		 System.out.println("This student can't registration");
+			 
+	    	 return age;
+	     }
 	  
 		
 	    public void setListSubject(List<Subject> listSubject) {

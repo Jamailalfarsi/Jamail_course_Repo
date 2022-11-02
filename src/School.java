@@ -188,6 +188,12 @@ public class School {
 					studentObj.firstLastName(stufName,stulName);
 					System.out.println(studentObj.firstLastName(stufName+" ",stulName));
 					
+					System.out.println("Enter student Age:");
+					Integer stuAge = sc.nextInt();
+					//stk.push(stuAge);
+					//stSudentObj.studentAge(stuAge );
+					System.out.println(studentObj.studentAge(stuAge ));
+					
 					System.out.println("Enter Email:");
 					String emailInput = sc.next();
 					stk.push(emailInput);
@@ -469,6 +475,7 @@ public class School {
 			}
 			catch(Exception e){
 				System.out.println("Execption:"+ e.getMessage() );
+				
 			}
 
 			}
