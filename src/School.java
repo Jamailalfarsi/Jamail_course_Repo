@@ -179,7 +179,15 @@ public class School {
 					schObj.studentList.add(studentObj);
 					studentObj.work();//Interface method
 					studentObj.study();//Interface method
-
+					System.out.println("Enter student first name:");
+					String stufName = sc.next();
+					stk.push(stufName);
+					System.out.println("Enter student last name:");
+					String stulName = sc.next();
+					stk.push(stulName);
+					studentObj.firstLastName(stufName,stulName);
+					System.out.println(studentObj.firstLastName(stufName+" ",stulName));
+					
 					System.out.println("Enter Email:");
 					String emailInput = sc.next();
 					stk.push(emailInput);

@@ -1,23 +1,35 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student implements StudentInterface{
+public class Student implements StudentInterface,Serializable{
 	
 	
 
 	     String studentName;
 	     String studentEmail;
 	     double studentCurrency;
-
+	     String firstName;
+         String lastName;
+         
 	     List<Subject> listSubject=  new ArrayList<>();
 	     
+	     @Override
 	   public void work(){
 		   System.out.println("this student is working");
 	   }
+	     @Override
 	   public void study() {
 		   System.out.println("this student is studing");
 	   }
+	     @Override
+	   
+	     public String firstLastName(String firstName,String lastName) {
+	    	 String fullName = firstName + lastName;
+		  return fullName;
+	   }
+	  
 		
 	    public void setListSubject(List<Subject> listSubject) {
 	    	this.listSubject=listSubject;
