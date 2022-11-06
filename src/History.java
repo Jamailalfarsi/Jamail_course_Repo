@@ -1,3 +1,5 @@
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.Stack;
 
 public class History {
@@ -11,6 +13,18 @@ public class History {
 		// no items; {@code false} otherwise.
 
 	}
+
+		try {
+			
+		ObjectInputStream in=new ObjectInputStream(new FileInputStream("C:\\Users\\user021\\eclipse-workspace\\history.txt"));
+		Stack<String> stk1  =(Stack<String>)in.readObject();
+		System.out.println(stk1);
+		
+		in.close();
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
 
 }
 }

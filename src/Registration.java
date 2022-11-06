@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -100,7 +103,19 @@ public void registrationStudent(){
 		if (exitInput2 == 0) {
 			isExit = false;
 		}
+		
 }
+	try {
+		FileOutputStream fout=new FileOutputStream("C:\\Users\\user021\\eclipse-workspace\\history.txt");
+		ObjectOutputStream out =new ObjectOutputStream(fout);
+		out.writeObject(stk);
+		out.flush();
+		out.close();
+		
+	}
+	catch(IOException e) {
+		e.printStackTrace();
+	}
 }
 }
 
