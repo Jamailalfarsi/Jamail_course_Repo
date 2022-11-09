@@ -15,7 +15,9 @@ public class Registration {
 	List<String> listDuplicateEmail = new ArrayList<>();
 	Set<String> hashEmailSet = new HashSet<String>();
 	Set<String> hashEmailSetU = new HashSet<String>();
-public void registrationStudent(){
+	String emailInput;
+	
+	public void registrationStudent(){
 	
 	Scanner sc = new Scanner(System.in);
 	isExit = Boolean.TRUE;
@@ -57,7 +59,7 @@ public void registrationStudent(){
 		System.out.println(studentObj.studentAge(stuAge ));
 		
 		System.out.println("Enter Email:");
-		String emailInput = sc.next();
+		 emailInput = sc.next();
 		stk.push(emailInput);
 		studentObj.setStudentEmail(emailInput);
 		schObj.studentList.add(studentObj);

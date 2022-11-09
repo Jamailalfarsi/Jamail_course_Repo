@@ -66,6 +66,9 @@ public class School {
 		Set<String> hashEmailSetU = new HashSet<String>();
 		List<School> schoolList = new ArrayList<>();
 		List<String> listDuplicateEmail = new ArrayList<>();
+		
+		Registration regStudent =new Registration();
+		
 		boolean subMenuExit = true;
 		
 		boolean usepass = true;
@@ -107,17 +110,20 @@ public class School {
 
 			switch (studentMenue) {
 			case 1:
-				Registration studReg=new Registration();
-				studReg.registrationStudent();
+				//Registration studReg=new Registration();
+				regStudent.registrationStudent();
 				break;
 			case 2:
 				// Printing elements of HashSet object
-				System.out.println(hashEmailSetU);
+				System.out.println(regStudent.hashEmailSetU);
 				break;
 
 			case 3:  		
-				Email emailDup=new Email();
-				emailDup.emailStudent();
+				for (String email : regStudent.listDuplicateEmail) {
+					if (regStudent.hashEmailSet.add(email) == false) {
+						System.out.println("Deplicate email is: " + " " + email);
+					}
+				}
 
 				break;
 
