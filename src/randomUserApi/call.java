@@ -4,7 +4,9 @@ import java.net.http.HttpResponse;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.io.IOException;
-class call {
+import java.io.Serializable;
+
+public class call implements Serializable{
 	public static void main(String[] args) {
 		
 		HttpRequest request = HttpRequest.newBuilder()

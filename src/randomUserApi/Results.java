@@ -1,11 +1,17 @@
 package randomUserApi;
 
-public class results {
+import java.io.Serializable;
+
+public class Results implements Serializable {
 	private String gender;
 	private String email;
 	private String phone;
 	private String cell;
 	private String nat;
+	
+	
+	
+	
 	private Coordinates coordinates;
 	private Dob dop;
 	private Id id;

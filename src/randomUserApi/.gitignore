@@ -12,3 +12,10 @@
 /call.class
 /info.class
 /results.class
+/HttpClientStatus.class
+/HeadRequest.class
+/GetRequest.class
+/FileBodyHandler.class
+/DontKnow.class
+/Results.class
+/Info.class

@@ -2,7 +2,7 @@ package randomUserApi;
 
 import java.io.Serializable;
 
-public class info implements Serializable{
+public class Info implements Serializable{
 	private String seed;
 	private int results;
 	private int page;
