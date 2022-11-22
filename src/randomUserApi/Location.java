@@ -1,48 +1,50 @@
 package randomUserApi;
 
-public class Location {
+import java.io.Serializable;
+
+public class Location implements Serializable {
 	private String city;
 	private String state;
 	private String country;
 	private String postcode;
 
 	//getters
-private String getCity() {
+	public String getCity() {
 	return city;
 }
 
 //setters
-private void setCity(String city) {
+	public void setCity(String city) {
 	this.city = city;
 }
 
 //getters
-private String getState() {
+	public String getState() {
 	return state;
 }
 
 //setters
-private void setState(String state) {
+	public void setState(String state) {
 	this.state = state;
 }
 
 //getters
-private String getCountry() {
+	public String getCountry() {
 	return country;
 }
 
 //setters
-private void setCountry(String country) {
+	public void setCountry(String country) {
 	this.country = country;
 }
 
 //getters
-private String getPostcode() {
+	public String getPostcode() {
 	return postcode;
 }
 
 //setters
-private void setPostcode(String postcode) {
+	public void setPostcode(String postcode) {
 	this.postcode = postcode;
 }
 

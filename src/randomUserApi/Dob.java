@@ -1,23 +1,25 @@
 package randomUserApi;
 
-public class Dob {
-String date;
-int age;
+import java.io.Serializable;
+
+public class Dob implements Serializable{
+	private String date;
+	private int age;
 	
 //getter
-private String getDate() {
+public String getDate() {
 	return date;
 }
 //setters
-private void setDate(String date) {
+public void setDate(String date) {
 	this.date = date;
 }
 // getters
-private int getAge() {
+public int getAge() {
 	return age;
 }
 // setters
-private void setAge(int age) {
+public void setAge(int age) {
 	this.age = age;
 }
 	public static void main(String[] args) {

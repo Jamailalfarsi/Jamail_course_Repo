@@ -1,31 +1,33 @@
 package randomUserApi;
 
-public class Name {
+import java.io.Serializable;
+
+public class Name implements Serializable{
 	private String title;
 	private String first;
 	private String last;
 	//getters
-private String getTitle() {
+	public  String getTitle() {
 	return title;
 }
 //setters
-private void setTitle(String title) {
+	public  void setTitle(String title) {
 	this.title = title;
 }
 //getters
-private String getFirst() {
+	public  String getFirst() {
 	return first;
 }
 //setters
-private void setFirst(String first) {
+	public  void setFirst(String first) {
 	this.first = first;
 }
 //getters
-private String getLast() {
+	public  String getLast() {
 	return last;
 }
 //setters
-private void setLast(String last) {
+	public  void setLast(String last) {
 	this.last = last;
 }
 	public static void main(String[] args) {

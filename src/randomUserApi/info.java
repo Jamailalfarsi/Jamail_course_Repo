@@ -1,6 +1,8 @@
 package randomUserApi;
 
-public class info {
+import java.io.Serializable;
+
+public class info implements Serializable{
 	private String seed;
 	private int results;
 	private int page;
@@ -8,49 +10,49 @@ public class info {
 	
 
 	//getters
-	private String getSeed() {
+	public  String getSeed() {
 		return seed;
 	}
 
 
 	//setters
-	private void setSeed(String seed) {
+	public  void setSeed(String seed) {
 		this.seed = seed;
 	}
 
 
 	//getters
-	private int getResults() {
+	public int getResults() {
 		return results;
 	}
 
 
 	//Setters
-	private void setResults(int results) {
+	public  void setResults(int results) {
 		this.results = results;
 	}
 
 
 	//getters
-	private int getPage() {
+	public  int getPage() {
 		return page;
 	}
 
 
 	//setters
-	private void setPage(int page) {
+	public  void setPage(int page) {
 		this.page = page;
 	}
 
 
 	//getters
-	private String getVersion() {
+	public  String getVersion() {
 		return version;
 	}
 
 
 	//setters
-	private void setVersion(String version) {
+	public  void setVersion(String version) {
 		this.version = version;
 	}
 

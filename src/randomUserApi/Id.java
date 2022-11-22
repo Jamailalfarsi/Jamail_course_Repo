@@ -1,23 +1,25 @@
 package randomUserApi;
 
-public class Id {
+import java.io.Serializable;
+
+public class Id implements Serializable{
 	private String nameId;
 	private String value;
 	
 //getters
-private String getNameId() {
+	public String getNameId() {
 	return nameId;
 }
 //setters
-private void setNameId(String nameId) {
+	public void setNameId(String nameId) {
 	this.nameId = nameId;
 }
 //getters
-private String getValue() {
+	public String getValue() {
 	return value;
 }
 //setters
-private void setValue(String value) {
+	public void setValue(String value) {
 	this.value = value;
 }
 	public static void main(String[] args) {
