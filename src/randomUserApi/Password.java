@@ -9,12 +9,13 @@ import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 
 public class Password {
-
-	 public static void main(String[] args) throws IOException, InterruptedException {
+	public void PasswordUser()throws IOException, InterruptedException {
+	// public static void main(String[] args) throws IOException, InterruptedException {
 
 	        HttpClient client = HttpClient.newHttpClient();
 	        HttpRequest request = HttpRequest.newBuilder()
-	                .uri(URI.create("https://randomuser.me/api/?password=CHARSETS,MIN_LENGTH-MAX_LENGTH")).build();
+	                .uri(URI.create("https://randomuser.me/api/?password=CHARSETS,MIN_LENGTH-MAX_LENGTH"))
+	                .build();
 
 	        HttpResponse<String> response = client.send(request,
 	                HttpResponse.BodyHandlers.ofString());

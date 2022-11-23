@@ -9,8 +9,8 @@ import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 
 public class Seeding {
-
-	 public static void main(String[] args) throws IOException, InterruptedException {
+	public void seedUser()throws IOException, InterruptedException {
+	// public static void main(String[] args) throws IOException, InterruptedException {
 
 	        HttpClient client = HttpClient.newHttpClient();
 	        HttpRequest request = HttpRequest.newBuilder()

@@ -5,15 +5,59 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Scanner;
 
 import com.google.gson.Gson;
 
 public class MultipleUserPaginationPasswordSeed {
-
+	
+		static void menueFunction() {
+			System.out.println("Select one of the options:");
+			System.out.println("1.Multiple user ");
+			System.out.println("2.Pagination ");
+			System.out.println("3. Passwords");
+			System.out.println("4.seeding");
+			
+		}
+	
 	
 		// TODO Auto-generated method stub
 		 public static void main(String[] args) throws IOException, InterruptedException {
+			 Scanner sc = new Scanner(System.in);
+			 //do {
+				 menueFunction();
+					//SubMenue menue2=new SubMenue();
+					//menue2.submenueFunction();
 
+					int Menue = sc.nextInt();
+					switch(Menue) {
+					case 1:
+						
+						RequestMulltipleUser userRequest=new RequestMulltipleUser();
+						 userRequest.mulltipleUser();
+
+						break;
+					case 2:
+						
+						Pagination paginationRequest=new Pagination();
+						paginationRequest. paginationAPI();
+					
+						break;
+					case 3:
+						Password passwordRequest=new Password();
+						passwordRequest.PasswordUser();
+						
+					break;
+					case 4:
+						Seeding seedRequest=new Seeding();
+						seedRequest.seedUser();
+						
+					break;
+					
+				}
+					//}while();
+		
+                 
 		        HttpClient client = HttpClient.newHttpClient();
 		        HttpRequest request = HttpRequest.newBuilder()
 		                .uri(URI.create("https://randomuser.me/api/?page=3&results=5&seed=abcj&password=upper,lower,1-16"))

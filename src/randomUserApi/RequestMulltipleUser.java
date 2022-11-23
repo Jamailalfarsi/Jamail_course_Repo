@@ -10,7 +10,8 @@ import com.google.gson.Gson;
 
 public class RequestMulltipleUser {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public void mulltipleUser()throws IOException, InterruptedException {
+//	public static void main(String[] args) throws IOException, InterruptedException {
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -28,9 +29,12 @@ public class RequestMulltipleUser {
         System.out.println(userObj.getInfo().getResults());
        System.out.println(userObj.getResults().get(4).getEmail());
        System.out.println(userObj.getResults().get(0).getPhone());
-       
+	      
 }
 
 }
+
+
+
 
 

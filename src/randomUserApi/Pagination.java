@@ -10,9 +10,10 @@ import com.google.gson.Gson;
 
 public class Pagination {
 
+	public void paginationAPI()throws IOException, InterruptedException {
 	
 		// TODO Auto-generated method stub
-		 public static void main(String[] args) throws IOException, InterruptedException {
+		// public static void main(String[] args) throws IOException, InterruptedException {
 
 		        HttpClient client = HttpClient.newHttpClient();
 		        HttpRequest request = HttpRequest.newBuilder()
@@ -30,8 +31,8 @@ public class Pagination {
 		        System.out.println(userObj.getInfo().getResults());
 		       System.out.println(userObj.getResults().get(0).getEmail());
 		       System.out.println(userObj.getResults().get(0).getPhone());
-		        	
+		 }        	
 
 	}
 
-}
+
