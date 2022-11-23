@@ -12,6 +12,7 @@ public class Results implements Serializable {
 	
 	
 	
+	
 	private Coordinates coordinates;
 	private Dob dop;
 	private Id id;
