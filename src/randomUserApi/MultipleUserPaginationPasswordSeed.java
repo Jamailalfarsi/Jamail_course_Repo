@@ -24,7 +24,7 @@ public class MultipleUserPaginationPasswordSeed {
 		// TODO Auto-generated method stub
 		 public static void main(String[] args) throws IOException, InterruptedException {
 			 Scanner sc = new Scanner(System.in);
-			 //do {
+			 do {
 				 menueFunction();
 					//SubMenue menue2=new SubMenue();
 					//menue2.submenueFunction();
@@ -55,27 +55,27 @@ public class MultipleUserPaginationPasswordSeed {
 					break;
 					
 				}
-					//}while();
+					}while(true);
 		
                  
-		        HttpClient client = HttpClient.newHttpClient();
-		        HttpRequest request = HttpRequest.newBuilder()
-		                .uri(URI.create("https://randomuser.me/api/?page=3&results=5&seed=abcj&password=upper,lower,1-16"))
-		                .build();
+		      //  HttpClient client = HttpClient.newHttpClient();
+		       //HttpRequest request = HttpRequest.newBuilder()
+		               // .uri(URI.create("https://randomuser.me/api/?page=3&results=5&seed=abcj&password=upper,lower,1-16"))
+		              //  .build();
 
-		        HttpResponse<String> response = client.send(request,
-		                HttpResponse.BodyHandlers.ofString());
+		       // HttpResponse<String> response = client.send(request,
+		             //   HttpResponse.BodyHandlers.ofString());
 
-		        System.out.println("The JSON of the selected is :"+ response.body());
+		       // System.out.println("The JSON of the selected is :"+ response.body());
 		        
-		        Gson gosonObj=new Gson();
-		        UserApi userObj=gosonObj.fromJson(response.body().toString(), UserApi.class);
-		        System.out.println("The Page is "+userObj.getInfo().getPage());
-		        System.out.println("The seed is:"+ userObj.getInfo().getSeed());
-		        System.out.println("The results is"+" "+userObj.getInfo().getResults());
+		      // Gson gosonObj=new Gson();
+		       // UserApi userObj=gosonObj.fromJson(response.body().toString(), UserApi.class);
+		      //  System.out.println("The Page is "+userObj.getInfo().getPage());
+		       // System.out.println("The seed is:"+ userObj.getInfo().getSeed());
+		      //  System.out.println("The results is"+" "+userObj.getInfo().getResults());
 		       //System.out.println(userObj.getResults().get(4).getEmail());
 		       //System.out.println(userObj.getResults().get(0).getPhone());
-		       System.out.println("The password generated is: "+ userObj.getResults().get(0).getLogin().getPassword());	
+		      // System.out.println("The password generated is: "+ userObj.getResults().get(0).getLogin().getPassword());	
 
 	}
 
