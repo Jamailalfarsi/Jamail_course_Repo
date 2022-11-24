@@ -21,6 +21,7 @@ public class MultipleUserPaginationPasswordSeed {
 			System.out.println("3. Passwords");
 			System.out.println("4.seeding");
 			System.out.println("5.Nationalty");
+			System.out.println("6.Including/Excluding fields");
 			
 			System.out.println("____________________________________________");
 		}
@@ -62,6 +63,12 @@ public class MultipleUserPaginationPasswordSeed {
 					case 5:
 						nationality nationality =new nationality();
 						nationality.userNationality();
+						
+					break;
+					
+					case 6:
+						IncludingExcludingFields includingExcludingField=new IncludingExcludingFields();
+						includingExcludingField.includingExcludingFields();
 						
 					break;
 					
