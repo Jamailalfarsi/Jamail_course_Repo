@@ -20,6 +20,7 @@ public class MultipleUserPaginationPasswordSeed {
 			System.out.println("2.Pagination ");
 			System.out.println("3. Passwords");
 			System.out.println("4.seeding");
+			System.out.println("5.Nationalty");
 			
 			System.out.println("____________________________________________");
 		}
@@ -55,6 +56,12 @@ public class MultipleUserPaginationPasswordSeed {
 					case 4:
 						Seeding seedRequest=new Seeding();
 						seedRequest.seedUser();
+						
+					break;
+					
+					case 5:
+						nationality userNationalaty =new nationality();
+						userNationalaty.userNationalaty() ;
 						
 					break;
 					
