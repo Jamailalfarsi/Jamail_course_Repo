@@ -60,8 +60,8 @@ public class MultipleUserPaginationPasswordSeed {
 					break;
 					
 					case 5:
-						nationality userNationalaty =new nationality();
-						userNationalaty.userNationalaty() ;
+						nationality nationality =new nationality();
+						nationality.userNationality();
 						
 					break;
 					
