@@ -19,16 +19,30 @@ public class Seeding {
 
 	        HttpResponse<String> response = client.send(request,
 	                HttpResponse.BodyHandlers.ofString());
+	        HttpResponse<String>Response=null;
+	        
+	        try {
+	       	 
+	       	 response=HttpClient.newHttpClient().send(request,  HttpResponse.BodyHandlers.ofString());
+	        }catch(IOException e){
+	       	 e.printStackTrace();
+	       	 
+	        }catch(InterruptedException e){
+	       	 e.printStackTrace();
+	       	 
+	        }
+	        
+	        System.out.println(response.body());
 
-	        //System.out.println(response.body());
+	        
 	        Gson gosonObj=new Gson();
 	        UserApi userObj=gosonObj.fromJson(response.body().toString(), UserApi.class);
 	        System.out.println("The seed is:"+ userObj.getInfo().getSeed());
-	        System.out.println(userObj.getInfo().getPage());
-	        System.out.println(userObj.getResults().get(0).getName());
-	        System.out.println(userObj.getInfo().getResults());
-	       System.out.println(userObj.getResults().get(0).getEmail());
-	       System.out.println(userObj.getResults().get(0).getPhone());
+	        //System.out.println(userObj.getInfo().getPage());
+	       // System.out.println(userObj.getResults().get(0).getName());
+	       // System.out.println(userObj.getInfo().getResults());
+	      // System.out.println(userObj.getResults().get(0).getEmail());
+	      // System.out.println(userObj.getResults().get(0).getPhone());
 	        	
 	}
 

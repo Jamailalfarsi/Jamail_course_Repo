@@ -19,15 +19,28 @@ public class Password {
 
 	        HttpResponse<String> response = client.send(request,
 	                HttpResponse.BodyHandlers.ofString());
-
-	        //System.out.println(response.body());
+	        HttpResponse<String>Response=null;
+            
+            try {
+           	 
+           	 response=HttpClient.newHttpClient().send(request,  HttpResponse.BodyHandlers.ofString());
+            }catch(IOException e){
+           	 e.printStackTrace();
+           	 
+            }catch(InterruptedException e){
+           	 e.printStackTrace();
+           	 
+            }
+            
+            System.out.println(response.body());
+            
 	        Gson gosonObj=new Gson();
 	        UserApi userObject=gosonObj.fromJson(response.body().toString(), UserApi.class);
-	        System.out.println(userObject.getInfo().getPage());
-	        System.out.println(userObject.getResults().get(0).getName());
-	        System.out.println(userObject.getInfo().getResults());
-	       System.out.println(userObject.getResults().get(0).getEmail());
-	       System.out.println(userObject.getResults().get(0).getPhone());
+	        //System.out.println(userObject.getInfo().getPage());
+	       // System.out.println(userObject.getResults().get(0).getName());
+	        //System.out.println(userObject.getInfo().getResults());
+	       //System.out.println(userObject.getResults().get(0).getEmail());
+	     //  System.out.println(userObject.getResults().get(0).getPhone());
 	       System.out.println("The password generated is: "+ userObject.getResults().get(0).getLogin().getPassword());
 	        	
 

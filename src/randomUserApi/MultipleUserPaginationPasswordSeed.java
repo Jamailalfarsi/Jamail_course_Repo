@@ -12,12 +12,16 @@ import com.google.gson.Gson;
 public class MultipleUserPaginationPasswordSeed {
 	
 		static void menueFunction() {
+			
+			System.out.println("____________________________________________");
+			
 			System.out.println("Select one of the options:");
 			System.out.println("1.Multiple user ");
 			System.out.println("2.Pagination ");
 			System.out.println("3. Passwords");
 			System.out.println("4.seeding");
 			
+			System.out.println("____________________________________________");
 		}
 	
 	
