@@ -14,7 +14,7 @@ public class IncludingExcludingFields {
 		
 		HttpClient client = HttpClient.newHttpClient();
 	    HttpRequest request = HttpRequest.newBuilder()
-	            .uri(URI.create("https://randomuser.me/api/?nat"))
+	            .uri(URI.create("https://randomuser.me/api/?inc=gender,name,nat"))
 	            .build();
 
 	    HttpResponse<String> response = client.send(request,
@@ -37,21 +37,24 @@ public class IncludingExcludingFields {
 	    Gson gosonObj=new Gson();
 	    UserApi userObject=gosonObj.fromJson(response.body().toString(), UserApi.class);
 	    
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getNat());
-	   //System.out.println("The Nationality is: "+ userObject.getResults().get(0).getCell());
-	   //System.out.println("The Nationality is: "+ userObject.getResults().get(0).getEmail());
-	   //System.out.println("The Nationality is: "+ userObject.getResults().get(0).getGender());
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getPhone());
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getName().getTitle()+"\t"+userObject.getResults().get(0).getName().getFirst()+"\t"+userObject.getResults().get(0).getName().getLast());
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getLocation().getCity());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getLocation().getState());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getLocation().getCountry());
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getLocation().getPostcode());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getStreet().getName()+"\t"+userObject.getResults().get(0).getStreet().getNumber());
-	  // System.out.println("The Nationality is: "+ userObject.getResults().get(0).getCoordinates().getLatitude());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getCoordinates().getLongitude());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getTimezone().getDescription());
-	 //  System.out.println("The Nationality is: "+ userObject.getResults().get(0).getTimezone().getOffset());
+	   System.out.println("The Nationality is: "+ userObject.getResults().get(0).getNat());
+	   System.out.println("The Cell is: "+ userObject.getResults().get(0).getCell());
+	   System.out.println("The Email is: "+ userObject.getResults().get(0).getEmail());
+	   System.out.println("The Gender is: "+ userObject.getResults().get(0).getGender());
+	   System.out.println("The Phone is: "+ userObject.getResults().get(0).getPhone());
+	   System.out.println("The Name is: "+ userObject.getResults().get(0).getName().getTitle()+"\t"+userObject.getResults().get(0).getName().getFirst()+"\t"+userObject.getResults().get(0).getName().getLast());
+	   System.out.println("The City is: "+ userObject.getResults().get(0).getLocation().getCity());
+	   System.out.println("The State is: "+ userObject.getResults().get(0).getLocation().getState());
+	   System.out.println("The Country is: "+ userObject.getResults().get(0).getLocation().getCountry());
+	   System.out.println("The Postcode is: "+ userObject.getResults().get(0).getLocation().getPostcode());
+	   System.out.println("The Street is: "+ userObject.getResults().get(0).getStreet().getName()+"\t"+userObject.getResults().get(0).getStreet().getNumber());
+	   System.out.println("The Latitude is: "+ userObject.getResults().get(0).getCoordinates().getLatitude());
+	   System.out.println("The Longitude is: "+ userObject.getResults().get(0).getCoordinates().getLongitude());
+	   System.out.println("The Description is: "+ userObject.getResults().get(0).getTimezone().getDescription());
+	   System.out.println("The Offset is: "+ userObject.getResults().get(0).getTimezone().getOffset());
+	   
+	   
+	   
 
 
 
