@@ -1,6 +1,8 @@
 package randomUserApi;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -39,6 +41,7 @@ public class RequestMulltipleUser {
 		       	 
 		        }
 		        
+		        String tryj = response.body();
 		        System.out.println(response.body());
 		        
 		        System.out.println("***************************************");
@@ -46,6 +49,22 @@ public class RequestMulltipleUser {
 		      //  for(int i=0;i<=5;i++) {
 		        Gson gosonObj=new Gson();
 		        UserApi userObj=gosonObj.fromJson(response.body().toString(), UserApi.class);
+		        
+		        try {
+		        	FileWriter file = new FileWriter("JSONFile.txt"); {
+		        		file.write(tryj.toString());
+		        		file.close();
+		        }
+		        }
+		        	catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		        System.out.println("file created");
+		           
+		      
+		        
+		        
+		        
 		        System.out.println("page:\t"+userObj.getInfo().getPage());
 		        System.out.println("Results:\t"+userObj.getInfo().getResults());
 		       System.out.println("Email:\t"+userObj.getResults().get(0).getEmail());

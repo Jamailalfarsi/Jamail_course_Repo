@@ -38,9 +38,9 @@ public class IncludingExcludingFields {
 	    
 	    UserApi userObject=gosonObj.fromJson(response.body().toString(), UserApi.class);
 	    
-	   // if (userObject.getResults().get(0).getNat()= null) {
+	    //if ((response.body().userObject.getResults().get(0).getNat() ==null)) {
 	   System.out.println("The Nationality is: "+ userObject.getResults().get(0).getNat());
-	    //}
+	   
 	   System.out.println("The Cell is: "+ userObject.getResults().get(0).getCell());
 	   System.out.println("The Email is: "+ userObject.getResults().get(0).getEmail());
 	   System.out.println("The Gender is: "+ userObject.getResults().get(0).getGender());
@@ -56,8 +56,7 @@ public class IncludingExcludingFields {
 	   System.out.println("The Offset is: "+ userObject.getResults().get(0).getLocation().getTimezone().getOffset());
 	   
 	   
-	   
-
+	    }
 
 
 
@@ -67,4 +66,4 @@ public class IncludingExcludingFields {
 		
 
 
-}
+
