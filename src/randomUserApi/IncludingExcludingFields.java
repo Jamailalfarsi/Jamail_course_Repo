@@ -49,11 +49,11 @@ public class IncludingExcludingFields {
 	   System.out.println("The State is: "+ userObject.getResults().get(0).getLocation().getState());
 	   System.out.println("The Country is: "+ userObject.getResults().get(0).getLocation().getCountry());
 	   System.out.println("The Postcode is: "+ userObject.getResults().get(0).getLocation().getPostcode());
-	   System.out.println("The Street is: "+ userObject.getResults().get(0).getStreet().getName()+"\t"+userObject.getResults().get(0).getStreet().getNumber());
-	   System.out.println("The Latitude is: "+ userObject.getResults().get(0).getCoordinates().getLatitude());
-	   System.out.println("The Longitude is: "+ userObject.getResults().get(0).getCoordinates().getLongitude());
-	   System.out.println("The Description is: "+ userObject.getResults().get(0).getTimezone().getDescription());
-	   System.out.println("The Offset is: "+ userObject.getResults().get(0).getTimezone().getOffset());
+	   System.out.println("The Street is: "+ userObject.getResults().get(0).getLocation().getStreet().getName()+"\t"+userObject.getResults().get(0).getLocation().getStreet().getNumber());
+	   System.out.println("The Latitude is: "+ userObject.getResults().get(0).getLocation().getCoordinates().getLatitude());
+	   System.out.println("The Longitude is: "+ userObject.getResults().get(0).getLocation().getCoordinates().getLongitude());
+	   System.out.println("The Description is: "+ userObject.getResults().get(0).getLocation().getTimezone().getDescription());
+	   System.out.println("The Offset is: "+ userObject.getResults().get(0).getLocation().getTimezone().getOffset());
 	   
 	   
 	   
