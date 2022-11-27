@@ -35,15 +35,17 @@ public class IncludingExcludingFields {
 	  System.out.println(response.body());
 	  
 	    Gson gosonObj=new Gson();
+	    
 	    UserApi userObject=gosonObj.fromJson(response.body().toString(), UserApi.class);
 	    
+	   // if (userObject.getResults().get(0).getNat()= null) {
 	   System.out.println("The Nationality is: "+ userObject.getResults().get(0).getNat());
+	    //}
 	   System.out.println("The Cell is: "+ userObject.getResults().get(0).getCell());
 	   System.out.println("The Email is: "+ userObject.getResults().get(0).getEmail());
 	   System.out.println("The Gender is: "+ userObject.getResults().get(0).getGender());
 	   System.out.println("The Phone is: "+ userObject.getResults().get(0).getPhone());
 	   System.out.println("The Name is: "+ userObject.getResults().get(0).getName().getTitle()+"\t"+userObject.getResults().get(0).getName().getFirst()+"\t"+userObject.getResults().get(0).getName().getLast());
-	   System.out.println("The City is: "+ userObject.getResults().get(0).getLocation().getCity());
 	   System.out.println("The State is: "+ userObject.getResults().get(0).getLocation().getState());
 	   System.out.println("The Country is: "+ userObject.getResults().get(0).getLocation().getCountry());
 	   System.out.println("The Postcode is: "+ userObject.getResults().get(0).getLocation().getPostcode());

@@ -22,6 +22,7 @@ public class MultipleUserPaginationPasswordSeed {
 			System.out.println("4.seeding");
 			System.out.println("5.Nationalty");
 			System.out.println("6.Including/Excluding fields");
+			System.out.println("7.Including");
 			
 			System.out.println("____________________________________________");
 		}
@@ -70,6 +71,11 @@ public class MultipleUserPaginationPasswordSeed {
 						IncludingExcludingFields includingExcludingField=new IncludingExcludingFields();
 						includingExcludingField.includingExcludingFields();
 						
+					break;
+					
+					case 7:
+						Including showIncludeuser=new Including();
+						showIncludeuser.showIncludeParamter();
 					break;
 					
 				}

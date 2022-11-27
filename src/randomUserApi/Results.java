@@ -13,7 +13,7 @@ public class Results implements Serializable {
 	
 	
 	
-	private Coordinates coordinates;
+	
 	private Dob dop;
 	private Id id;
 	private Location location;
@@ -21,8 +21,7 @@ public class Results implements Serializable {
 	private Name name;
 	private Picture picture;
 	private Registered registered;
-	private Street street;
-	private Timezone timezone;
+	
 	
 	public String getGender() {
 		return gender;
@@ -64,13 +63,7 @@ public class Results implements Serializable {
 		this.nat = nat;
 	}
 	
-	public Coordinates getCoordinates() {
-		return coordinates;
-	}
 	
-	public void setCoordinates(Coordinates coordinates) {
-		this.coordinates = coordinates;
-	}
 	
 	public Dob getDop() {
 		return dop;
@@ -128,20 +121,7 @@ public class Results implements Serializable {
 		this.registered = registered;
 	}
 	
-	public Street getStreet() {
-		return street;
-	}
 	
-	public void setStreet(Street street) {
-		this.street = street;
-	}
-	
-	public Timezone getTimezone() {
-		return timezone;
-	}
-	public void setTimezone(Timezone timezone) {
-		this.timezone = timezone;
-	}
 	
 	
 }
