@@ -15,18 +15,18 @@ public class RequestMulltipleUser {
 		
 		//System.out.println("How many user you want?");
 		
-       
+		 for(int i=0;i<=5;i++) {
       
 			 HttpClient client = HttpClient.newHttpClient();
 		        HttpRequest request = HttpRequest.newBuilder()
-		                .uri(URI.create("https://randomuser.me/api/"))
+		                .uri(URI.create("https://randomuser.me/api/?results=5"))
 		                .build();
 
 		        HttpResponse<String> response = client.send(request,
 		                HttpResponse.BodyHandlers.ofString());
 
-		        System.out.println("The JSON of the selected is :"+ response.body());
-		        HttpResponse<String>Response=null;
+		    //    System.out.println("The JSON of the selected is :"+ response.body());
+		      //  HttpResponse<String>Response=null;
 		        
 		        try {
 		       	 
@@ -43,7 +43,7 @@ public class RequestMulltipleUser {
 		        
 		        System.out.println("***************************************");
 		        
-		        for(int i=0;i<=5;i++) {
+		      //  for(int i=0;i<=5;i++) {
 		        Gson gosonObj=new Gson();
 		        UserApi userObj=gosonObj.fromJson(response.body().toString(), UserApi.class);
 		        System.out.println("page:\t"+userObj.getInfo().getPage());
