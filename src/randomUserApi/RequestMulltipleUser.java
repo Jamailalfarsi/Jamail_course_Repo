@@ -1,5 +1,7 @@
 package randomUserApi;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,7 +43,7 @@ public class RequestMulltipleUser {
 		       	 
 		        }
 		        
-		        String tryj = response.body();
+		        String tryObject = response.body();
 		        System.out.println(response.body());
 		        
 		        System.out.println("***************************************");
@@ -52,7 +54,7 @@ public class RequestMulltipleUser {
 		        
 		        try {
 		        	FileWriter file = new FileWriter("JSONFile.txt"); {
-		        		file.write(tryj.toString());
+		        		file.write(tryObject.toString());
 		        		file.close();
 		        }
 		        }
@@ -62,9 +64,12 @@ public class RequestMulltipleUser {
 		        System.out.println("file created");
 		           
 		      
+		        FileReader file = new FileReader("JSONFile.txt");
+		        BufferedReader readFile = new BufferedReader(file);
+		        System.out.println(readFile);
 		        
 		        
-		        
+		        System.out.println("name:\t"+userObj.getResults().get(0).getName().getFirst());
 		        System.out.println("page:\t"+userObj.getInfo().getPage());
 		        System.out.println("Results:\t"+userObj.getInfo().getResults());
 		       System.out.println("Email:\t"+userObj.getResults().get(0).getEmail());
